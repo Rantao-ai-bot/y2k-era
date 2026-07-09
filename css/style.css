@@ -617,3 +617,145 @@ height: 736.0px;
     font-size:13px;
     letter-spacing:1px;
 }
+
+/* ===================== */
+/* MODAL — SOLAR EDITION */
+/* ===================== */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.modal:target {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.55);
+    backdrop-filter: blur(6px);
+    transition: opacity .35s ease;
+}
+
+/* ===== WINDOW ===== */
+.modal-window {
+    position: relative;
+    background: #ffffff;
+    width: 480px;
+    padding: 40px 45px;
+    border-radius: 32px;
+    text-align: center;
+    transform: translateY(-25px);
+    opacity: 0;
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
+}
+
+.modal:target .modal-window {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== CLOSE BUTTON ===== */
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+    transition: color .25s ease;
+}
+
+.modal-close:hover {
+    color: #D97B18;
+}
+
+/* ===== IMAGE ===== */
+.modal-window img {
+    width: 260px;
+    margin-bottom: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== TITLE ===== */
+.modal-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #2d2d2d;
+    margin-bottom: 12px;
+}
+
+/* ===== TEXT ===== */
+.modal-text {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* ===== DISCOUNT BLOCK ===== */
+.modal-discount {
+    background: #FFE7C2;
+    padding: 14px 0;
+    border-radius: 18px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #B5660D;
+    margin-bottom: 28px;
+}
+
+/* ===== MAIN BUTTON ===== */
+.modal-main-btn {
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    background: #D97B18;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-bottom: 18px;
+    transition:
+        background-color .3s ease,
+        transform .3s ease;
+}
+
+.modal-main-btn:hover {
+    background: #b86512;
+    transform: translateY(-3px);
+}
+
+/* ===== SECOND BUTTON ===== */
+.modal-secondary-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    background: #F2F2F2;
+    color: #333;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    transition:
+        background-color .3s ease,
+        transform .3s ease;
+}
+
+.modal-secondary-btn:hover {
+    background: #e6e6e6;
+    transform: translateY(-3px);
+}
